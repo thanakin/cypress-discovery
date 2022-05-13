@@ -1,0 +1,6 @@
+npm run test
+https://buger-eats.vercel.app/
+npx nodemon server.js
+
+
+npm install cypress-file-upload --save-dev
