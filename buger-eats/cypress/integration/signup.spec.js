@@ -44,4 +44,12 @@ describe('Signup', ()=>{
         
     })
 
+    it('Incorrect email', function() {
+
+        signup.go()
+        signup.fillForm(this.deliver.email_inv)
+        signup.submit()
+        signup.alertMessageShouldBe('Oops! Email com formato inválido.')
+        
+    })
 })
