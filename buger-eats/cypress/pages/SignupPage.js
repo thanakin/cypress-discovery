@@ -1,8 +1,8 @@
 class SignupPage {
-    
+
     go() {
         cy.visit('/')
-        
+
         cy.get('a[href="/deliver"]').click()
         cy.get('#page-deliver form h1').should('have.text', 'Cadastre-se para  fazer entregas')
     }
@@ -31,7 +31,7 @@ class SignupPage {
         contem 'age/' - 'input[accept*="age/"]'  */
     }
 
-    submit(){
+    submit() {
         cy.get('form button[type="submit"]').click()
     }
 
@@ -40,7 +40,8 @@ class SignupPage {
     }
 
     alertMessageShouldBe(expectedMessage) {
-        cy.get('.alert-error').should('have.text', expectedMessage)
+        //cy.get('.alert-error').should('have.text', expectedMessage)
+        cy.contains('.alert-error', expectedMessage).should('be.visible')
     }
 
 }
